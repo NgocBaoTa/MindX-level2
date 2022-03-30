@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redo</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .add {
+            width: 574px;
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 40% 40% 20%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+        }
+
+        .find {
+            width: 574px;
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 70% 10% 20%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+        }
+
+        .members-list {
+            list-style: none;
+            width: 574px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+        }
+
+        .member {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ccc;
+            border-radius: 5px;
+            width: 100%;
+            height: 30px;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="add">
+        <input type="text" name="" class="add__name" placeholder="Tên" required>
+        <input type="text" name="" class="add__number" placeholder="Điện Thoại" required>
+        <button type="submit" class="add__button">Thêm</button>
+    </div>
+
+    <hr  width="650px" size="1px" align="center" color="black" />
+
+    <div class="find">
+        <input type="text" class="find__input" id="find__input" placeholder="Tìm kiếm">
+        <button type="submit" class="find__button--find">Tìm</button>
+        <button type="submit" class="find__button--delete">Xóa Trùng</button>
+    </div>
+
+    <div class="result"></div>
+    <ul class="members-list"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
