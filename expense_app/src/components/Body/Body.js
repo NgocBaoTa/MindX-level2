@@ -11,7 +11,7 @@ const Body = (props) => {
 
                 <Chart />
 
-                <List list={props.expenses}/>
+                <List list={props.expenses} setList={props.setExpenses}/>
             </div>
         </CardBody>
     )

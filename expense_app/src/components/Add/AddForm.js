@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 const AddForm = (props) => {
     const [name, setName] = useState('')
@@ -50,11 +51,12 @@ const AddForm = (props) => {
                             e.preventDefault();
                             if(name !== '' && date !== '' && amount !== '') {
                                 props.addExpense({
+                                    id: uuidv4(),
                                     date: date,
                                     name: name,
                                     amount: amount
                                 });
-                            }
+                            } 
                             setAmount('')
                             setDate('')
                             setName('')
